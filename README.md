@@ -1,5 +1,5 @@
 #NLPapp
-A simple natural language processing app.
+A simple natural language processing android app.
 
 ##How it works
 1. Enter text
