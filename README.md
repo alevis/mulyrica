@@ -1,8 +1,8 @@
 #NLPapp
-A simple natural language processing android app.
+A simple natural language processing web and mobile app.
 
 ##How it works
-1. Enter text
+1. Enter song and artist
 2. Analyze text
 
 ##Future features
