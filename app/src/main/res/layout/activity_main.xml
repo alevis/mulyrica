@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/yeorange"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefinsans_regular"
+        android:padding="@dimen/logo_padding"
+        android:text="@string/app_name"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/logo_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="@dimen/input_marginX"
+        android:fontFamily="@font/barlowcondensed_regular"
+        android:hint="@string/song_title"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:fontFamily="@font/barlowcondensed_regular"
+        android:hint="@string/artist_name"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/analyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/artist"
+        android:layout_margin="@dimen/button_margin"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/concertone_regular"
+        android:text="@string/button"
+        android:textAlignment="center"
+        android:textColor="@color/yeorange" />
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="logo_padding">75dp</dimen>
+    <dimen name="vertical_spacing">20dp</dimen>
+    <dimen name="button_margin">30dp</dimen>
+    <dimen name="logo_shadowD">1.5</dimen>
+    <dimen name="input_marginY">10dp</dimen>
+    <dimen name="input_marginX">30dp</dimen>
+    <dimen name="results_title_padding">10dp</dimen>
+    <dimen name="horizontal_line_height">2dip</dimen>
+    <!--fonts and text size-->
+    <dimen name="logo_size">48sp</dimen>
+    <dimen name="results_title_size">20sp</dimen>
+    <dimen name="analysis_title">15sp</dimen>
+    <dimen name="lyrics_size">15sp</dimen>
+
+
+</resources>

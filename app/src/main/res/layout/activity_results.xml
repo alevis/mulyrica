@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.agabasoft.levis.app.ResultsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/yeorange">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/ResultsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_spacing"
+                android:fontFamily="@font/josefinsans_regular"
+                android:padding="@dimen/results_title_padding"
+                android:text="@string/analysis_title"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/results_title_size"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/horizontal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_height"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_marginRight="@dimen/button_margin"
+                android:background="@color/appMaroon" />
+
+            <TextView
+                android:id="@+id/lyrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlowcondensed_regular"
+                android:padding="@dimen/results_title_padding"
+                android:text="lyrics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/lyrics_size" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/analysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/concertone_regular"
+        android:padding="@dimen/horizontal_line_height"
+        android:text="@string/analysis_results"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/analysis_title" />
+
+</LinearLayout>

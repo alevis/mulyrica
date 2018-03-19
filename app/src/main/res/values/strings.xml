@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mulyrica</string>
+
+    <!-- song fields -->
+    <string name="song_title">Song title</string>
+    <string name="artist_name">Name of the artist</string>
+    <string name="banner">App banner</string>
+    <string name="button">Analyze</string>
+    <string name="results">Results</string>
+    <!--result fields-->
+    <string name="analysis_title">Lyrics</string>
+    <string name="analysis_results">Analysis Results</string>
+
+</resources>

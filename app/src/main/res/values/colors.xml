@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--primary colors -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="yeorange">#ffae42</color>
+
+
+    <!--primary app colors -->
+    <color name="appPrimary">#82b1ff</color>
+    <color name="appLight">#b6e3ff</color>
+    <color name="appDark">#4d82cb</color>
+
+
+    <!--accent app colors -->
+    <color name="appAccentPrimary">#f48fb1</color>
+    <color name="appAccentLight">#ffc1e3</color>
+    <color name="appAccentDark">#bf5f82</color>
+    <color name="appMaroon">#b03060</color>
+
+
+</resources>
