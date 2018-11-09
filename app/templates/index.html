@@ -30,32 +30,34 @@
 	<!-- </div> -->
 	{% if results %}
 	<div class="row">
-		<div class="col-sm-4 analysis">
+		<div class="col-sm-4">
 			<h2 class="text-center">Analysis</h2>
-			<div class="center-block">
-				<p class="text-center lyrics">
+			<div class="center-block analysis">
+				<p class="text-center">
 					{% for sentence,result in results %} {{ sentence }}
 					<br /> {% endfor %}
 				</p>
 			</div>
 		</div>
-		<div class="col-sm-4 lyrics">
+		<div class="col-sm-4">
 			<h2 class="text-center">Lyrics</h2>
-			<div class="center-block">
-				<p class="text-center lyrics">
+			<div class="center-block lyrics">
+				<p class="text-center">
 					{% for sentence,result in results %} {{ sentence }}
 					<br /> {% endfor %}
 				</p>
 			</div>
 		</div>
-			<div class="col-sm-4 stats">
+			<div class="col-sm-4">
 				<h2 class="text-center">Stats</h2>
-				<ul class="text-primary text-justify">
-					<li>Neutral: {{analysis['neu']}}</li>
-					<li>Negative: {{analysis['neg']}}</li>
-					<li>Positive: {{analysis['pos']}}</li>
-					<li>Compound: {{analysis['compound']}}</li>
-				</ul>
+				<div class="center-block stats">
+					<ul class="text-primary text-justify">
+						<li>Neutral: {{analysis['neu']}}</li>
+						<li>Negative: {{analysis['neg']}}</li>
+						<li>Positive: {{analysis['pos']}}</li>
+						<li>Compound: {{analysis['compound']}}</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
