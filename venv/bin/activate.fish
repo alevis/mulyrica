@@ -36,7 +36,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/levis/Documents/agaballc/projects/mulyrica/flask/venv"
+set -gx VIRTUAL_ENV "/home/levis/Documents/agaballc/projects/mulyrica/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
