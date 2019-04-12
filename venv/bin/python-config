@@ -1,4 +1,4 @@
-#!/home/levis/Documents/agaballc/projects/mulyrica/flask/venv/bin/python
+#!/home/levis/Documents/agaballc/projects/mulyrica/venv/bin/python
 
 import sys
 import getopt
