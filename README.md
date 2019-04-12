@@ -7,6 +7,11 @@ Outputs: Sentiment
 This web application runs on port `5000`
 
 ## Preliminaries
+There are two branches of this repository
+ 1. Currently the master branch resides in a bitbucket repo **(Mulyrica)**
+ 2. A branch **(ubranch)** resides in both the bitbucket repo and the github repo **(lbapp)**
+ 3. Currently investigating an issue with the spacy plugin via **ubranch**
+
 You might have to install the `vader_lexicon` package (Will fix this) to use the
 `SentimentIntensityAnalyzer`.
 Run this in `python shell` after activating venv` `nltk.download('vader_lexicon').`
