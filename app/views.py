@@ -25,8 +25,12 @@ def index():
 	score=dict()
 	length = 0
 	form = MyForm()
+        artist = ''
+        song = ''
 	if form.is_submitted():
-		lyrics = PyLyrics.getLyrics(form.artist.data,form.song.data)
+                song = str(form.song.data)
+                artist = str(form.artist.data)
+		lyrics = PyLyrics.getLyrics(artist, song)
 		lyrics = lyrics.split("\n")
 		sid = SentimentIntensityAnalyzer()
 		for line in lyrics:
