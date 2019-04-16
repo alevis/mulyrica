@@ -17,6 +17,10 @@ class MyForm(FlaskForm):
 	song = StringField(u'song')
 	submit = SubmitField(u'submit')
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('not_found.html'), 404
+
 @app.route('/',methods=['GET','POST'])
 @app.route('/index',methods=['GET','POST'])
 def index():
@@ -31,6 +35,9 @@ def index():
                 song = str(form.song.data)
                 artist = str(form.artist.data)
 		lyrics = PyLyrics.getLyrics(artist, song)
+                if lyrics is None:
+                    return render_template('not_found.html',title='Mulyrica',\
+                            form=form)
 		lyrics = lyrics.split("\n")
 		sid = SentimentIntensityAnalyzer()
 		for line in lyrics:
