@@ -1,40 +1,72 @@
 # Mulyrica
-A tool for analyzing and providing useful insights into lyrics. 
+
+~~A tool for analyzing and providing useful insights into lyrics.~~
+A tool for generating popular song lyrics.
+
 ```
-Inputs: Song and Author
-Outputs: Sentiment 
+Inputs: Song and Author + Tweets
+Outputs: Sentiment analysis + Lyrics **Updated**
 ```
-This web application runs on port `5000`
 
 ## Preliminaries
+
 You might have to install the `vader_lexicon` package (Will fix this) to use the
 `SentimentIntensityAnalyzer`.
+
 Run this in `python shell` after activating venv` `nltk.download('vader_lexicon').`
 
-## Activating virtualenvironment
-- **Linux** users go to `webapp/venv/bin/` and run `source activate`.
-Also edit `run.py` to ensure that the path to python is `venv/bin/python/`
-- **Windows** users go to `mulyrica/Scripts/` and run `activate.`
-Also edit `run.py` accordingly as shown above.
+## Setup
 
-## Development environment
+## Twitter integration
+
+- Pending
+
+### Frontend
+
+- [ ] Bootstrap + JavaScript/jQuery
+
+- [ ] ReactJS + CSS
+
+
+### Activating your virtualenv
+
+Create and activate a `python environment` outside your app.
+
+Make sure to install `gunicorn` and `werkzeug` server packages.
+
+Windows user will have to modify `werk.py` to point to where their virtualenv is.
+
+
+### Development environment
 Beginning with flask 0.11, run flask from the `cli` when doing development
 ```
   $ export FLASK_APP=my_application
   $ export FLASK_ENV=development
   $ flask run
 ```
+
 For production simply do:
- ```
-if __name__=='__main__':
-  app.run(host='127.0.0.1') # setting the host ip addr is optional
 ```
-## Running
-- `chmod a+x run.py`
-- Then do `./run.py` and navigate to `http://localhost:5000`
-
-# Running
-- `chmod a+x run.py`
-- Then do `./run.py` and navigate to `http://localhost:5000`
+  $export FLASK_ENV=production
+   modify config.py
+```
 
 
+## Running the app
+`./guni` to run app on `gunicorn` server.
+`./werk.py` to run app on `werkzeug` server.
+
+
+## Checklist
+
+- [ ] Responsive frontend design
+
+## TODO
+
+- [ ] Twiter integration
+
+- [ ] Testing on various screens/devices.
+
+
+## License
+- Pending
