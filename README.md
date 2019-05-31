@@ -1,53 +1,22 @@
 # Mulyrica
-<<<<<<< HEAD
-
-~~A tool for analyzing and providing useful insights into lyrics.~~
-A tool for generating popular song lyrics.
-
-```
-Inputs: Song and Author + Tweets
-Outputs: Sentiment analysis + Lyrics **Updated**
-=======
 A tool for creating, analyzing and providing useful insights into lyrics. 
 ![Mulyrica](mulyrica.png)
 ```
 Inputs: Song and Author + Tweets
 Outputs: Sentiment Analysis + Lyrics
->>>>>>> ubranch
 ```
 
 ## Preliminaries
-<<<<<<< HEAD
-=======
 There are two branches of this repository
  1. Currently the master branch resides in a bitbucket repo **(Mulyrica)**
  2. A branch **(ubranch)** resides in both the bitbucket repo and the github repo **(lbapp)**
  3. Currently investigating an issue with the spacy plugin via **ubranch**
->>>>>>> ubranch
 
 You might have to install the `vader_lexicon` package (Will fix this) to use the
 `SentimentIntensityAnalyzer`.
 
 Run this in `python shell` after activating venv` `nltk.download('vader_lexicon').`
 
-<<<<<<< HEAD
-## Setup
-
-## Twitter integration
-
-- Pending
-
-### Frontend
-
-- [ ] Bootstrap + JavaScript/jQuery
-
-- [ ] ReactJS + CSS
-
-
-### Activating your virtualenv
-
-Create and activate a `python environment` outside your app.
-=======
 ## Activating virtualenvironment
 - ~~**Linux** users go to `webapp/venv/bin/` and run `source activate`.~~
 - create a pyenv 1 dir above app
@@ -56,7 +25,6 @@ Create and activate a `python environment` outside your app.
 - Edit `werk.py` to run the python in `pyenv`
 - ~~**Windows** users go to `mulyrica/Scripts/` and run `activate.`
 Also edit `run.py` accordingly as shown above.~~
->>>>>>> ubranch
 
 Make sure to install `gunicorn` and `werkzeug` server packages.
 
@@ -73,35 +41,12 @@ Beginning with flask 0.11, run flask from the `cli` when doing development
 
 For production simply do:
 ```
-<<<<<<< HEAD
-  $export FLASK_ENV=production
-   modify config.py
-```
-
-
-## Running the app
-`./guni` to run app on `gunicorn` server.
-`./werk.py` to run app on `werkzeug` server.
-
-
-## Checklist
-
-- [ ] Responsive frontend design
-
-## TODO
-
-- [ ] Twiter integration
-
-- [ ] Testing on various screens/devices.
-
-=======
 ## Running
 - ~~`chmod a+x run.py`~~
 - `chmod 700 werk.py`
 - ~Then do `./run.py` and navigate to `http://localhost:5000`~
 - `./werk.py` to run app on `werkzeug` server.
 - `./guni.py` to run on `gunicorn`.
->>>>>>> ubranch
 
 ## License
 - Pending
