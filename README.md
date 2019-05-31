@@ -47,6 +47,7 @@ For production simply do:
 - ~Then do `./run.py` and navigate to `http://localhost:5000`~
 - `./werk.py` to run app on `werkzeug` server.
 - `./guni.py` to run on `gunicorn`.
+```
 
 ## License
 - Pending
