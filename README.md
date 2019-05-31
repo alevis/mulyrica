@@ -1,9 +1,9 @@
 # Mulyrica
-A tool for analyzing and providing useful insights into lyrics. 
+A tool for creating, analyzing and providing useful insights into lyrics. 
 ![Mulyrica](mulyrica.png)
 ```
-Inputs: Song and Author
-Outputs: Sentiment 
+Inputs: Song and Author + Tweets
+Outputs: Sentiment Analysis + Lyrics
 ```
 This web application runs on port `5000`
 
