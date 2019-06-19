@@ -49,5 +49,9 @@ For production simply do:
 - `./guni.py` to run on `gunicorn`.
 ```
 
+## TODO
+- Integrate twitter
+- Fix dot env settings to protect auth keys and secrets
+
 ## License
 - Pending
