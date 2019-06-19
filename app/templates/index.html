@@ -34,8 +34,10 @@
 			<h2 class="text-center">Analysis</h2>
 			<div class="center-block analysis">
 				<p class="text-center">
-					{% for sentence,result in results %} {{ sentence }}
-					<br /> {% endfor %}
+					{% for tweet in tweets %} 
+						{{ tweet }}
+						<br />
+					{% endfor %}
 				</p>
 			</div>
 		</div>

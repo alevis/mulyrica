@@ -1,4 +1,5 @@
-import os.environ as envkey
+from os import environ as envkey
+import re
 from PyLyrics import *
 from nltk import tokenize
 from nltk.sentiment.util import *
@@ -6,6 +7,7 @@ from nltk.corpus import subjectivity
 from nltk.classify import NaiveBayesClassifier
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
+import tweepy
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
@@ -37,31 +39,43 @@ class MyListener(StreamListener):
 		try:
 			with open('python.json', 'a') as f:
 				f.write(data)
-			except BaseException as e:
-				print "Error on_data: %s " % str(e)
-			return True
+				return True
+		except BaseException as e:
+			print "Error on_data: %s " % str(e)
+		return True
 	
 	def on_error(self, status):
 		print status
 		return True
 
-twitter_stream = Stream(auth, MyListener())
-twitter_stream.filter(track=['#python'])
+#twitter_stream = Stream(auth, MyListener())
+#twitter_stream.filter(track=['#python'])
 				
 
-def get_track_album(singer,song):
-	# Merge this code with getLyrics method so that it returns a list and the album
-	# corresponding to this song.
-	singer = singer.replace(' ','')
-	song = song.replace(' ','')
-	r = requests.get('http://lyrics.wikia.com/{0}:{1}'.format(singer,song))
-	s = BeautifulSoup(r.text, features="html.parser")
-	# Get the album for this song
-	album = str(s.find('i').find('a').text)
-	if album:
-		return album
-	else:
-		return 'Could not find album for that song. Please try again.'
+def test_keys():
+	print 'music key: ', music_key
+	print 'consumer key: ', consumer_key
+	print 'consumer secret: ', consumer_secret
+	print 'access token ', access_token
+	print 'access secret: ', access_secret	
+
+# test_keys()
+
+def get_timeline():
+	timeline = []
+	for status in tweepy.Cursor(api.home_timeline).items(10):
+		timeline.append(status.text)
+	return timeline
+
+def tag_search(hashtag):
+	hashtag = re.sub(r"[^A-Za-z]+", '', hashtag)
+	hashtag = '#' + hashtag.lower()
+	results = []
+	print hashtag
+	for tweet in tweepy.Cursor(api.search, q=hashtag).items(10):
+		results.append(tweet.text)
+	print results
+	return results
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -102,7 +116,7 @@ def index():
 		analysis['pos'] = analysis['pos']/length
 		analysis['compound'] = analysis['compound']/length
 		return render_template('index.html',title='Mulyrica',\
-			results=zip(lyrics,results),analysis=analysis,form=form)
+			results=zip(lyrics,results),analysis=analysis,form=form, tweets=tag_search(album))
 	return render_template('index.html',title='Mulyrica',form=form)
 
 @app.route('/index2', methods=['GET','POST'])
